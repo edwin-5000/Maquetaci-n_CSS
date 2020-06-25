@@ -1,0 +1,37 @@
+/* manejas los estilas para que se adapte a todas las pantallas */
+/* llamar media-queri */
+@media(max-width: 900px){
+  .blogs-main-new{
+    grid-template-columns: 1fr;/*tome una sola columna*/
+    grid-template-rows: 3fr; /* sean 3 filas */
+  }
+
+  .blogs-new-img-container{
+    /* quiero que la imagen se valla a la fila 2 */
+    grid-row: 2;
+  }/*cuando la pantalla llege a 900px tome estas dimenciones*/
+
+  .blogs-news-info-container{
+    /* tome psoscion columna 1 y fila 3 */
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .blogs-posts-container .posts-container{
+    max-width: 45%;
+  }
+  .proyects-posts-container .posts-container{
+    grid-template-columns: 1fr 1fr;/*que sean 2 columnas*/
+    grid-template-rows: 2fr;/*tomen dos filas*/
+  }
+  .profile-main-container .profile-container{
+    display: block;
+  }
+
+}
+
+@media(max-width: 600px){
+  .blogs-posts-container .posts-container{
+    max-width: 95%;
+  }
+}

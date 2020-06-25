@@ -1,0 +1,368 @@
+/* los estilos de las letras font google */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
+
+/* quitar los estidlos del navegador por defecto */
+
+body{
+  font-family: 'Roboto mono', monospace;/* forma del txt */
+  margin: 0;
+  padding: 0;
+}
+
+/* quitarle el estilo a las etiqueas */
+a{
+  text-decoration: none; /*para que no muestre los puntos al lado del txt*/
+  display: inline;/*para que se aliea uno al lado del otro*/
+  color: black; /*color de la funete o texto*/
+}
+
+
+/* solo a la pagina principa */
+
+.home-body{
+ /* no deja hace scrrol en la pagina */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/* para que de adapte a las diferentes pantallas  */
+.grid-container{
+  max-width: 980px; /*nacho maximo */
+  margin: auto;/* magen se automatica */
+}
+/* estilos al header */
+
+header{
+  width: 100%;/*tome todo el acnho de la pagina*/
+  height: 140px; /*alto de la barra*/
+  display: grid;/*para hacer las columnas*/
+  grid-template-rows: 1fr 1fr; /*que sean dos columnas*/
+}
+
+header .header-icons-container{
+  width: 100%;/*para que sea igaula de ancho que su padre header*/
+  height: 50px;/*alto para que sea la mitad del contener principal*/
+  display: grid;/*para posicionar el contenerdo*/
+  background-color: #47cfac; /*color del fondo del contenedor*/
+}
+
+/* estilos a los div de container hedaer iconos */
+
+header .header-icons-container .icons{
+  width: 300px; /*ancho*/
+  height: auto; /*para que sea como su padre*/
+  display: flex; /*para darle estilo a los contenedores*/
+  justify-content: flex-end; /*para que los elementos display flex vallan al lado derecho*/
+  align-items: center;/* justificar los elementos para que se centren y tomen tdo el espacio */
+  justify-content: space-between;/* darle un espacion */
+  justify-self: end; /**/
+  margin-right: 50px;/* margen a la derecha  */
+}
+
+
+/* los iconos estan con span de damos color y ya */
+header .icons span{
+  color: white;
+}
+
+
+/* segunda partede del header */
+/* arreglar el logo y el nav que va a otro contenerdor */
+
+nav {
+  display: grid;/* seccionar el contenerdor en dos secciones  */
+  grid-template-columns: 1fr 1fr;/* hacer dos columnas con una fraccio y otra fracion */
+  height: 90px;/*alto*/
+}
+
+/* estilos al logo */
+nav .nav-logo-container {
+  margin-left: 50px;/* margen derecho */
+}
+/* estilos a la imagen del logo */
+
+nav .nav-logo-container img{
+  width: 220px; /*ancho de la img*/
+  margin-top: 10px;/* margen superior */
+}
+
+
+
+/* estilos al link que va otro sitio */
+nav .profile-link{
+  display: flex;/* para organizar los elementos */
+  align-items: center;/* para que se alinien al centro */
+  justify-content: flex-end;/* justificarlos para queden 100% lado derecho */
+  margin-right: 50px;/* margen derecho para que no qude peado */
+}
+
+
+/* estilos a las estiquetas a */
+
+nav .profile-link a{
+  color: black;
+  /* borde de un1 px solido y de color negro */
+  border-bottom: 1px solid black;
+}
+
+
+/* estilos al contenido priccipal */
+
+.home-main{
+  display: grid;/*para dividir el contenedo*/
+  grid-template-columns: 1fr 4fr 1fr;/* divide en tres partes y una de ellas es mas grandes */
+  height: 100%; /*altura del 100%*/
+  background-image: url('/assets/img/Blog.jpg');/* colocar la img de fondo */
+  background-position: center;/* img no se mueva quede centro*/
+  background-repeat: no-repeat; /*para que nos se repita la img*/
+  background-size: cover;
+}
+
+.home-main section{
+  display: grid;/* priemero se coloca display grid para darle forma */
+  grid-column: 2;
+  justify-items: center;/* jsutifique los elementos al centro */
+  height: 350px;/* altura */
+  margin-top: 80px;/* margen arriba */
+}
+
+/* forma al texto */
+.home-main-text{
+  font-family: 'Roboto mono', monospace;/* forma del txt */
+  font-size: 30px; /*Tamano de la letra*/
+  font-weight: 700px;/* ancho de fuentes */
+  letter-spacing: 10px;/* espacion entre las letras */
+  color: white; /*color del txt*/
+  text-align: center;/* central el text */
+}
+
+/* estilos del botton */
+.home-main-button{
+  width: 110px;/* ancho */
+  height: 50px;/* alto */
+  background-color: #47cfac;/* color del boton */
+  display: grid;/* forma del txt boton */
+  align-items: center;/* contennido al centro */
+}
+
+/* forma a la etique de ancla del btoton */
+.home-main-button a{
+  font-weight: 700;/* ancho de fuente  */
+  font-size: 18px; /*tamano del letra*/
+}
+
+
+/* estilos al web blogs main */
+.blogs-main{
+  display: grid;
+}
+
+.blogs-new-container{
+  background-color: #e6e9ed;
+  padding: 0 5px 40px;/* padding es el espacio interno de la caja 0 arriba y abajo 50px derecha izquierda */
+
+}
+
+/* estiloa img principal */
+
+.blogs-main-new{
+  display: grid; /*para hacer cuadridcula*/
+  grid-template-columns: 2fr 1fr;/* hacer las columnas */
+  grid-template-rows: 2fr;/* dos filas */
+}
+
+/* estilos solo contenerdo de la img */
+
+.blogs-new-img-container{
+  grid-column: 1;/* para que se posiciones en el primer cajos */
+}
+
+/* estilos de img */
+
+.blogs-new-img-container img{
+  width: 85%;/* tamano de la img en % para que se acondiciones */
+}
+
+/* estilos infromacion del blog principal */
+
+.blogs-news-info-container{
+  grid-column: 2;/* que se pisiciones el ne la columna 2 */
+}
+
+/* estilos al parrafo */
+
+.blogs-news-info-container p{
+  margin-bottom: 35px; /*margen de texto*/
+}
+
+/* estilos contenido principal txt */
+
+.blogs-posts-container{
+  padding: 0 50px 40px; /*arriba 0 dereha 50 abajo 40*/
+}
+
+/* estilo titula 3 */
+.blogs-posts-container h3{
+  border-bottom: 1px solid #cdd2da;
+  padding-bottom: 20px;
+  text-align: center;/* cetrar el text */
+}
+
+/* estilo del boton generico */
+.blogs-button{
+  border: 1px solid #47cfac;/* teine borde color y solido */
+  padding:10px 15px;/* espacio interno  alto 10 ancho 15*/
+  font-size: 12px;/* letra pquena */
+}
+
+/* contenedero de los blogs secundarios */
+
+.blogs-posts-container .posts-container{
+  display: inline-block;/* se coleque de  forma horizontal */
+  padding-left: 10px;/* espacio lado derecho */
+  max-width: 30%;/* espacio entre contenedores cuando se acomoden */
+  margin-bottom: 50px;/* separacion de arriba y abajo */
+}
+
+/* orgainzar los parrafos */
+
+.blogs-posts-container .posts-container p{
+  margin-bottom: 50px;/*   */
+}
+
+/* estilos de la imagen */
+.blogs-posts-container .posts-container img{
+  width: 100%;/* ancho del 100% porque el padree ya tiene dimencion */
+}
+
+/* estilos del footer */
+
+footer{
+  width: 100%; /*tome doto el acnho de la pagina*/
+  height: 80px;/* alto  */
+  background-color: #22272d;/* colode de fondo */
+  border-top: 35px solid #47cfac;/* bode de arriba solido y de un tamaño grueso */
+  text-align: center;/* queremos que su hijo se alie al centro posicion del txt */
+
+}
+
+/* estilo estique de parrafo */
+
+footer p{
+  color: white;
+  margin-top: 30px; /*margen arriba*/
+}
+
+/* estilos al blog donde esta uno solo */
+
+.blogpost-img-container{
+  padding: 0 50px 40px;/* arriba - drecho e izquierdo - abajo */
+}
+
+/* estilos de la imagen  */
+.blogpost-img-container img{
+  width: 100%;/* ancho toda la pagina */
+}
+
+/* forma conterenrdo procncipal */
+
+.blogpost-main-container{
+  padding: 0 50px 40px;/* cero arriba - 50 derecha izqueirda - 40 abajo */
+}
+
+/* titulo principla estilos al h3 */
+.blogpost-main-container h3{
+  /* para hacerle la raya abajo del titulos */
+  border-bottom: 1px solid #cdd2da;/* borde abjo 1px solido y color */
+  padding-bottom: 20px;
+}
+
+/* estilo titulo del h1 */
+
+.blogpost-main-container article h1{
+  font-size: 35px;
+}
+
+/* contactos y likes */
+
+.contact-main-container{
+  width: 100%;/* toma todo el acho de la pagina */
+  min-height: 250px;/*  toma una altura mininia */
+  background-color: #e6e9ed;/* color de fondo */
+  text-align: center;/* alieado del texto */
+  padding-bottom: 50px;/* espacio abajo con pading */
+}
+
+/* coloracara un contenerdo al lado del otro */
+.contact-main-container div{
+   display: inline-block;/* colocarlo uno al lado del otro */
+   width: 49.5%;/* aancho dividir y ancho compledo al padre */
+   height: 100% ;/* alto como el padre 100% */
+}
+
+/* estilo estiquetas ancla <a> */
+
+.contact-main-container div a{
+  border-bottom: 1px solid black;/* boder en la parte de abajo */
+  padding-bottom: 5PX;/* espacion abajo */
+}
+
+/* ESTILOS A LOS CONTENEDORES DERACHA E IZQUIERDA */
+.contact-main-container .contact-left, .contact-right{
+  text-align: initial;/* alineado del txt */
+  margin-top: 85px;/* margen arribal */
+}
+
+/* esilos a las imagenes */
+
+.contact-main-container img{
+  width: 100px;/* ancho */
+
+}
+
+/* estilos del perfil */
+.profile-main-container{
+  padding: 70px 40px;/* alto y acho tamano */
+  background-color: #e6e9ed;/* color de fonfo */
+  margin-bottom: 50px;/* espacio abajo */
+  /*   */
+}
+
+/* estilo de imagen */
+
+.profile-main-container img{
+  width: 320px;/* ancho */
+  margin-right: 30px;/* margen a la derecha y aleje el contenido del aldo derecho*/
+}
+
+/* posiciones imagen izquierda y txt derecho */
+.profile-main-container .profile-container{
+ display: flex;
+}
+
+/* estiilos a los 3 proyectos  */
+
+.profile-main-proyects {
+  padding: 0 50px 40px;
+}
+
+.profile-main-proyects h3{
+  border-bottom: 1px solid #cdd2da;/* linea de abajo del titulo */
+  padding-bottom: 35px;/* dimeciones abajo */
+  text-align: center;/* alinee el txt */
+}
+
+/* contenerdo principla del proyecto */
+
+.proyects-main-container{
+  display: grid;/* hacer columnas */
+  grid-template-columns: 1fr 1fr 1fr;/* hacer las columnas */
+}
+
+.proyects-container{
+  padding: 0 7px;/* espacio arriba abajo cero derecha e izquierda 5px */
+}
